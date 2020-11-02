@@ -1,0 +1,37 @@
+{
+  "name": "xtypeof",
+  "version": "1.0.0",
+  "description": "Extended typeof. Lightweight. Zero dependencies.",
+  "main": "lib/xtypeof.js",
+  "scripts": {
+    "start": "lib/xtypeof.js",
+    "test": "tap --timeout=60 --coverage --no-browser --100"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolaeIotu/xtypeof.git"
+  },
+  "keywords": [
+    "typeof",
+    "xtypeof",
+    "types",
+    "xtypes"
+  ],
+  "author": {
+    "email": "nicolae.g.iotu@gmail.com",
+    "name": "Nicolae, Iotu",
+    "url": "https://github.com/NicolaeIotu"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/NicolaeIotu/xtypeof/issues"
+  },
+  "homepage": "https://github.com/NicolaeIotu/xtypeof#readme",
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "grunt": "^1.3.0",
+    "grunt-shell": "^3.0.1",
+    "jsdoc": "^3.6.6",
+    "tap": "^14.10.8"
+  }
+}

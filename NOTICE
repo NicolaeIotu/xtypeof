@@ -1,0 +1,24 @@
+NOTICE: this file and the LICENSE file must be kept as per terms of the 
+Apache Version 2.0 License and any changes claimed by a work of authorship
+using xtypeof directly, or using works of authorship using xtypeof, must be
+added at the end of it even if such products are published under a different
+type of license.
+
+xtypeof is Copyright (C) 2020 Nicolae Iotu, nicolae.g.iotu@gmail.com
+
+xtypeof is a lightweight, zero dependencies library/function published under
+Apache Version 2.0 License Terms by it's original author
+Nicolae Iotu, (nicolae.g.iotu@gmail.com).
+
+The License covers the following components of xtypeof:
+- 'docs' folder and contents within
+- 'lib' folder and contents within
+- 'test' folder and contents within
+- '.gitignore' file
+- '.npmignore' file
+- 'CHANGELOG.md' file
+- 'LICENSE' file
+- 'NOTICE' file
+- 'package.json' file
+- 'package-lock.json' file
+- 'README.md' file
