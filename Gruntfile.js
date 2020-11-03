@@ -25,15 +25,15 @@ module.exports = function (grunt) {
           '\'eslint --init\''
       },
       eslintFix: {
-        command: 'eslint --fix',
+        command: 'eslint --fix -c "<%= __cwd %>/.eslintrc.json"',
         options: __preferLocal
       },
       eslintFixDryRun: {
-        command: 'eslint --fix-dry-run',
+        command: 'eslint --fix-dry-run -c "<%= __cwd %>/.eslintrc.json"',
         options: __preferLocal
       },
       jsdoc: {
-        command: 'rm -rf "<%= __cwd %>/jsdoc" && jsdoc -c "<%= __cwd %>/jsdoc-conf.js" "<%= __cwd %>"'
+        command: 'rm -rf "<%= __cwd %>/jsdoc" && jsdoc -c "<%= __cwd %>/scripts/jsdoc-conf.js" "<%= __cwd %>"'
       }
     }
   })
