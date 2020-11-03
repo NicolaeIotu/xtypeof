@@ -3,13 +3,13 @@
 
 !/docs
 !/lib
+!/scripts
 !/test
 !.eslintrc.json
 !.gitignore
 !.npmignore
 !CHANGELOG.md
 !Gruntfile.js
-!jsdoc-conf.js
 !LICENSE
 !package.json
 !package-lock.json
