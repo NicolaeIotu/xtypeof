@@ -34,11 +34,31 @@ module.exports = function (grunt) {
       },
       jsdoc: {
         command: 'rm -rf "<%= __cwd %>/jsdoc" && jsdoc -c "<%= __cwd %>/scripts/jsdoc-conf.js" "<%= __cwd %>"'
+      },
+      prepublish: {
+        command: 'npm publish --dry-run'
+      }
+    },
+    
+    // uglify plugin
+    uglify: {
+      basic: {
+        options: {
+          mangle: true,
+          compress: true,
+          sourceMap: true,
+          banner: '/* xtypeof is Copyright (C) 2020 Nicolae Iotu, nicolae.g.iotu@gmail.com\n' +
+              'Licensed under SPDX Apache-2.0, http://www.apache.org/licenses/LICENSE-2.0 */'
+        },
+        files: {
+          'dist/xtypeof.js': ['lib/xtypeof.js']
+        }
       }
     }
   })
   
   grunt.loadNpmTasks('grunt-shell')
+  grunt.loadNpmTasks('grunt-contrib-uglify')
   
   grunt.registerTask('default', ['shell:eslintFixDryRun'])
   grunt.registerTask('purge', ['shell:purge'])
@@ -46,4 +66,7 @@ module.exports = function (grunt) {
   grunt.registerTask('eslintFix', ['shell:eslintFix'])
   grunt.registerTask('eslintFixDryRun', ['shell:eslintFixDryRun'])
   grunt.registerTask('jsdoc', ['shell:jsdoc'])
+  grunt.registerTask('prepublish', ['shell:prepublish'])
+  
+  grunt.registerTask('uglifyBasic', ['uglify:basic'])
 }

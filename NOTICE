@@ -11,12 +11,16 @@ Apache Version 2.0 License Terms by it's original author
 Nicolae Iotu, (nicolae.g.iotu@gmail.com).
 
 The License covers the following components of xtypeof:
+- 'dist' folder and contents within
 - 'docs' folder and contents within
 - 'lib' folder and contents within
+- 'scripts' folder and contents within
 - 'test' folder and contents within
+- '.eslintrc.json' file
 - '.gitignore' file
 - '.npmignore' file
 - 'CHANGELOG.md' file
+- 'Gruntfile.js' file
 - 'LICENSE' file
 - 'NOTICE' file
 - 'package.json' file

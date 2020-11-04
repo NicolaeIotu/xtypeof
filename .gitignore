@@ -1,6 +1,7 @@
 /*
 /.*
 
+!/dist
 !/docs
 !/lib
 !/scripts
@@ -11,7 +12,7 @@
 !CHANGELOG.md
 !Gruntfile.js
 !LICENSE
+!NOTICE
 !package.json
 !package-lock.json
 !README.md
-!NOTICE

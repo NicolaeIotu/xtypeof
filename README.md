@@ -16,6 +16,7 @@ the environment such as "typeerror", "rangeerror" etc.) and all other environmen
  such as "htmldivelement" a.m.o.
 
 ## Examples
+### Node.js
 ```
 const { xtypeof } = require('xtypeof')
 
@@ -26,6 +27,21 @@ console.log(xtypeof(123n)) // 'bigint'
 console.log(xtypeof(Buffer.alloc(5))) // 'uint8array'
 console.log(xtypeof(new Error('err'))) // 'error'
 console.log(xtypeof(new RangeError('oor'))) // 'rangeerror'
+```
+### Browser
+```
+...
+<head>
+    ...
+    <script src="./xtypeof.bundle.js"></script>
+    ...
+...
+    <script>
+        let xtypeof = xtypeofBundled.xtypeof;
+        console.log(xtypeof([])); // 'array'
+        ...
+    </script>
+...
 ```
 
 ## Others
