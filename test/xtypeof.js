@@ -17,15 +17,15 @@ let testArr = [
     [],                                  // 10
     new Map(),                           // 11
     new Set(),                           // 12
-    new Date(),                          //13
-    /^a/,                                //14
-    new WeakMap,                         //15
-    new WeakSet,                         //16
+    new Date(),                          // 13
+    /^a/,                                // 14
+    new WeakMap,                         // 15
+    new WeakSet,                         // 16
     new Promise(() => {}),               // 17
     new ArrayBuffer(1),                  // 18
     new SharedArrayBuffer(1),            // 19
     new DataView(new ArrayBuffer(1)),    // 20
-    new Int8Array(1),                          // 21
+    new Int8Array(1),                    // 21
     Buffer.alloc(1),                     // 22
     new Uint8ClampedArray(1),            // 23
     new Int16Array(1),                   // 24
