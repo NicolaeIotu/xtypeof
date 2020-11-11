@@ -13,10 +13,10 @@ module.exports = function (grunt) {
           'npm install',
           'rm -f package-lock.json',
           'rm -f *.tgz',
-          'rm -rf ./jsdoc',
+          'rm -rf ./docs',
           'npm uninstall',
           'rm -rf ./node_modules',
-          'rm -rf ./nyc_output'
+          'rm -rf ./.nyc_output'
         ].join(' && '),
         options: __preferNotLocal
       },
@@ -37,6 +37,12 @@ module.exports = function (grunt) {
       },
       prepublish: {
         command: 'npm publish --dry-run'
+      },
+      pretest: {
+        "command": 'grunt jsdoc && ' +
+            // this makes sure there is no map at dist/xtypeof.js
+            'grunt uglifyBasicWithMap && grunt uglifyBasic && ' +
+            'browserify -e dist/xtypeof.js -o dist/xtypeof.bundle.js -s xtypeofBundled'
       }
     },
     
@@ -45,10 +51,17 @@ module.exports = function (grunt) {
       basic: {
         options: {
           mangle: true,
+          compress: true
+        },
+        files: {
+          'dist/xtypeof.js': ['lib/xtypeof.js']
+        }
+      },
+      basicWithMap: {
+        options: {
+          mangle: true,
           compress: true,
-          sourceMap: true,
-          banner: '/* xtypeof is Copyright (C) 2020 Nicolae Iotu, nicolae.g.iotu@gmail.com\n' +
-              'Licensed under SPDX Apache-2.0, http://www.apache.org/licenses/LICENSE-2.0 */'
+          sourceMap: true
         },
         files: {
           'dist/xtypeof.js': ['lib/xtypeof.js']
@@ -67,6 +80,8 @@ module.exports = function (grunt) {
   grunt.registerTask('eslintFixDryRun', ['shell:eslintFixDryRun'])
   grunt.registerTask('jsdoc', ['shell:jsdoc'])
   grunt.registerTask('prepublish', ['shell:prepublish'])
+  grunt.registerTask('pretest', ['shell:pretest'])
   
   grunt.registerTask('uglifyBasic', ['uglify:basic'])
+  grunt.registerTask('uglifyBasicWithMap', ['uglify:basicWithMap'])
 }

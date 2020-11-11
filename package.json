@@ -1,11 +1,11 @@
 {
   "name": "xtypeof",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Extended typeof. Lightweight. Zero dependencies.",
-  "main": "dist/xtypeof.js",
+  "main": "lib/xtypeof.js",
   "scripts": {
-    "start": "dist/xtypeof.js",
-    "pretest": "grunt jsdoc && grunt uglifyBasic && browserify -e dist/xtypeof.js -o dist/xtypeof.bundle.js -s xtypeofBundled",
+    "start": "node dist/xtypeof.js",
+    "pretest": "grunt pretest",
     "test": "tap --timeout=60 --coverage --no-browser --100"
   },
   "repository": {
@@ -23,7 +23,7 @@
     "name": "Nicolae, Iotu",
     "url": "https://github.com/NicolaeIotu"
   },
-  "license": "Apache-2.0",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/NicolaeIotu/xtypeof/issues"
   },

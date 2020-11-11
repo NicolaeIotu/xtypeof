@@ -39,8 +39,8 @@
     
         
             <div class="description"><p><strong>xtypeof</strong> is a lightweight, zero dependencies function which takes an object as argument and returns a lowercase
-string representing the extended type of object passed including builtins, types derived from Error, and all
-other types available in the environment. See <code>returns</code> section.<br>
+string representing the extended type of object passed including builtins and all other types available in the
+environment. See <code>returns</code> section.<br>
 Inspired by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#Examples">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#Examples</a></p></div>
         
 
@@ -114,7 +114,7 @@ Inspired by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>1.0.0</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>2.0.0</li></ul></dd>
     
 
     
@@ -144,7 +144,7 @@ Inspired by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
 
     
     <dt class="tag-license">License:</dt>
-    <dd class="tag-license"><ul class="dummy"><li>Apache-2.0</li></ul></dd>
+    <dd class="tag-license"><ul class="dummy"><li>ISC</li></ul></dd>
     
 
     
@@ -152,7 +152,7 @@ Inspired by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="xtypeof.js.html">xtypeof.js</a>, <a href="xtypeof.js.html#line41">line 41</a>
+        <a href="xtypeof.js.html">xtypeof.js</a>, <a href="xtypeof.js.html#line37">line 37</a>
     </li></ul></dd>
     
 
@@ -185,9 +185,8 @@ Inspired by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
 Returns include &quot;undefined&quot;, &quot;null&quot;, &quot;boolean&quot;, &quot;number&quot;, &quot;bigint&quot;, &quot;string&quot;, &quot;symbol&quot;, &quot;function&quot;, &quot;object&quot;,
 &quot;array&quot;, &quot;map&quot;, &quot;set&quot;, &quot;date&quot;, &quot;regexp&quot;, &quot;weakmap&quot;, &quot;weakset&quot;, &quot;promise&quot;, &quot;arraybuffer&quot;, &quot;sharedarraybuffer&quot;,
 &quot;dataview&quot;, &quot;int8array&quot;, &quot;uint8array&quot;, &quot;uint8clampedarray&quot;, &quot;int16array&quot;, &quot;uint16array&quot;, &quot;int32array&quot;,
-&quot;uint32array&quot;, &quot;float32array&quot;, &quot;float64array&quot;, &quot;bigint64array&quot;, &quot;biguint64array&quot;, &quot;error&quot; (and all other derived
-errors available in the environment such as &quot;typeerror&quot;, &quot;rangeerror&quot; etc.) and all other environment specific
-extended lowercase types such as &quot;htmldivelement&quot; a.m.o.<br>
+&quot;uint32array&quot;, &quot;float32array&quot;, &quot;float64array&quot;, &quot;bigint64array&quot;, &quot;biguint64array&quot;, &quot;error&quot; and all other
+environment specific extended lowercase types such as &quot;htmldivelement&quot; a.m.o.<br>
 For efficiency non-regular types are not handled by xtypeof. So far just the Proxy will be misrecognized as 'object'.</p>
 </div>
 
@@ -214,7 +213,7 @@ For efficiency non-regular types are not handled by xtypeof. So far just the Pro
     
     <pre class="prettyprint"><code>console.log(xtypeof([])) //'array'</code></pre>
 
-    <pre class="prettyprint"><code>console.log(xtypeof(new RangeError('oor'))) //'rangeerror'</code></pre>
+    <pre class="prettyprint"><code>console.log(xtypeof(new RangeError('oor'))) //'error'</code></pre>
 
 
 
