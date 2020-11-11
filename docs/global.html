@@ -104,7 +104,7 @@
     
 
     
-    <h4 class="name" id="xtypeof"><span class="type-signature"></span>xtypeof<span class="signature">(obj)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    <h4 class="name" id="isBuffer"><span class="type-signature"></span>isBuffer<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
@@ -112,10 +112,8 @@
 
 
 <div class="description">
-    <p><strong>xtypeof</strong> is a lightweight, zero dependencies function which takes an object as argument and returns a lowercase
-string representing the extended type of object passed including builtins, types derived from Error, and all
-other types available in the environment. See <code>returns</code> section.<br>
-Inspired by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#Examples">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#Examples</a></p>
+    <p>If you need to support Safari 5-7 (8-10 yr-old browser),
+take a look at https://github.com/feross/is-buffer</p>
 </div>
 
 
@@ -124,55 +122,6 @@ Inspired by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>obj</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">any</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -198,14 +147,6 @@ Inspired by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
     
 
     
-    <dt class="tag-author">Author:</dt>
-    <dd class="tag-author">
-        <ul>
-            <li>Nicolae Iotu &lt;nicolae.g.iotu@gmail.com>
-@</li>
-        </ul>
-    </dd>
-    
 
     
 
@@ -216,7 +157,7 @@ Inspired by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="xtypeof.js.html">xtypeof.js</a>, <a href="xtypeof.js.html#line40">line 40</a>
+        <a href="PRIVATE_performance_node_modules_kind-of_index.js.html">PRIVATE/performance/node_modules/kind-of/index.js</a>, <a href="PRIVATE_performance_node_modules_kind-of_index.js.html#line124">line 124</a>
     </li></ul></dd>
     
 
@@ -241,44 +182,8 @@ Inspired by <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
 
 
 
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <p>Lowercase string defining the extended type of obj:
-&quot;undefined&quot;, &quot;null&quot;, &quot;boolean&quot;, &quot;number&quot;, &quot;bigint&quot;, &quot;string&quot;, &quot;symbol&quot;, &quot;function&quot;, &quot;object&quot;, &quot;array&quot;, &quot;map&quot;,
-&quot;set&quot;, &quot;date&quot;, &quot;regexp&quot;, &quot;weakmap&quot;, &quot;weakset&quot;, &quot;promise&quot;, &quot;arraybuffer&quot;, &quot;sharedarraybuffer&quot;, &quot;dataview&quot;,
-&quot;int8array&quot;, &quot;uint8array&quot;, &quot;uint8clampedarray&quot;, &quot;int16array&quot;, &quot;uint16array&quot;, &quot;int32array&quot;, &quot;uint32array&quot;,
-&quot;float32array&quot;, &quot;float64array&quot;, &quot;bigint64array&quot;, &quot;biguint64array&quot;, error&quot; (and all other derived errors available
-in the environment such as &quot;typeerror&quot;, &quot;rangeerror&quot; etc.) and all other environment specific extended lowercase
-types such as &quot;htmldivelement&quot;.<br>
-(for efficiency some non-regular types are not handled i.e. Proxy)</p>
-</div>
 
 
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">string</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-    <h5>Examples</h5>
-    
-    <pre class="prettyprint"><code>console.log(xtypeof([])) //'array'</code></pre>
-
-    <pre class="prettyprint"><code>console.log(xtypeof(new RangeError('oor'))) //'rangeerror'</code></pre>
 
 
 
@@ -298,7 +203,7 @@ types such as &quot;htmldivelement&quot;.<br>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#xtypeof">xtypeof</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-xtypeof.html">xtypeof</a></li></ul><h3>Global</h3><ul><li><a href="global.html#isBuffer">isBuffer</a></li></ul>
 </nav>
 
 <br class="clear">

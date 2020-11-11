@@ -1,5 +1,5 @@
 const tap = require('tap')
-const { xtypeof } = require(`${process.cwd()}`)
+const xtypeof = require(`${process.cwd()}`)
 
 /* IMPORTANT! Do not alter the formatting of test files */
 
@@ -74,7 +74,7 @@ let resultArr = [
     "bigint64array",                     // 30
     "biguint64array",                    // 31
     "error",                             // 32
-    "typeerror"                          // 33
+    "error"                          // 33
 ]
 
 testArr.forEach((elem, index) => {
