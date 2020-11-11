@@ -18,7 +18,7 @@ lowercase types such as "htmldivelement" a.m.o.
 ## Examples
 ### Node.js
 ```
-const { xtypeof } = require('xtypeof')
+const xtypeof = require('xtypeof')
 
 console.log(xtypeof([])) // 'array'
 console.log(xtypeof('a')) // 'string'
