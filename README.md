@@ -57,3 +57,8 @@ function xtypeof(o) {
     return Object.prototype.toString.call(o).slice(8, -1).toLowerCase()
 }
 ``` 
+
+## Documentation
+[xtypeof documentation](https://nicolaeiotu.github.io/xtypeof/ "xtypeof documentation")
+
+&copy; Copyright 2020 Nicolae Iotu, nicolae.g.iotu@gmail.com

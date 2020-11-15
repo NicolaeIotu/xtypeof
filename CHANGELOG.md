@@ -1,5 +1,7 @@
 # xtypeof Changelog
 
+## v2.0.1 Patch README.md, jsdoc and apply eslint formatting
+
 ## v2.0.0 Changed license and breaking optimizations
 Changed license to ISC.
 
