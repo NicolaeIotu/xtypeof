@@ -5,7 +5,7 @@ module.exports = {
     'includePattern': '.+\\.js(doc|x)?$',
     'excludePattern': '(^|\\/|\\\\)_',
     'exclude': [
-      './node_modules', './test', './.idea'
+      './.github', './.idea', './.nyc_output', './dist', './node_modules', './test',  './scripts'
     ]
   },
   'sourceType': 'module',

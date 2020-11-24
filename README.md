@@ -23,7 +23,7 @@ const xtypeof = require('xtypeof')
 console.log(xtypeof([])) // 'array'
 console.log(xtypeof('a')) // 'string'
 console.log(xtypeof(null)) // 'null'
-console.log(xtypeof(123n)) // 'bigint'
+console.log(xtypeof(BigInt(123))) // 'bigint'
 console.log(xtypeof(Buffer.alloc(5))) // 'uint8array'
 console.log(xtypeof(new Error('err'))) // 'error'
 console.log(xtypeof(new RangeError('oor'))) // 'error'
@@ -37,8 +37,12 @@ console.log(xtypeof(new RangeError('oor'))) // 'error'
     ...
 ...
     <script>
-        let xtypeof = xtypeofBundled.xtypeof;
         console.log(xtypeof([])); // 'array'
+        console.log(xtypeof('a')); // 'string'
+        console.log(xtypeof(null)); // 'null'
+        console.log(xtypeof(BigInt(123))); // 'bigint'
+        console.log(xtypeof(new Error('err'))); // 'error'
+        console.log(xtypeof(new RangeError('oor'))); // 'error'
         ...
     </script>
 ...
@@ -47,9 +51,8 @@ console.log(xtypeof(new RangeError('oor'))) // 'error'
 ## Others
 Inspired by [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#Examples](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#Examples)
 
-For efficiency non-regular types are not handled by xtypeof. So far just the Proxy will be misrecognized as 'object'.
-
-Contributions are welcomed. The project is at the moment setup for `npm` only.
+There is an exception with Proxy which is not a regular type and will be recognized as 'object'. This is done for
+ efficiency.
 
 If you feel 'module' is a bit too much of a title for **xtypeof** :) then just use its main function:
 ```

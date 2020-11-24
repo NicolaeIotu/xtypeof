@@ -1,1 +1,0 @@
-{"version":3,"file":"xtypeof.js","sources":["../lib/xtypeof.js"],"names":["module","exports","o","Object","prototype","toString","call","slice","toLowerCase"],"mappings":"AAoCAA,OAAOC,QAAU,SAAUC,GACzB,OAAOC,OAAOC,UAAUC,SAASC,KAAKJ,GAAGK,MAAM,GAAI,GAAGC"}

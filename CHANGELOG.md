@@ -1,5 +1,11 @@
 # xtypeof Changelog
 
+## v2.0.4 Improve README.md, shorten package description
+Improve README.md. 
+Replace 123n with BigInt(123) syntax.
+Correct Browser example.
+Backend improvements and corrections.
+
 ## v2.0.1 Patch README.md, jsdoc and apply eslint formatting
 
 ## v2.0.0 Changed license and breaking optimizations

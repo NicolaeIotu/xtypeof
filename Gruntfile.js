@@ -13,6 +13,7 @@ module.exports = function (grunt) {
           'npm install',
           'rm -f package-lock.json',
           'rm -f *.tgz',
+          'rm -rf ./dist',
           'rm -rf ./docs',
           'npm uninstall',
           'rm -rf ./node_modules',
@@ -40,9 +41,8 @@ module.exports = function (grunt) {
       },
       pretest: {
         "command": 'grunt jsdoc && ' +
-            // this makes sure there is no map at dist/xtypeof.js
-            'grunt uglifyBasicWithMap && grunt uglifyBasic && ' +
-            'browserify -e dist/xtypeof.js -o dist/xtypeof.bundle.js -s xtypeofBundled'
+            'grunt uglifyBasic && ' +
+            'browserify -e dist/xtypeof.js -o dist/xtypeof.bundle.js -s xtypeof'
       }
     },
     
