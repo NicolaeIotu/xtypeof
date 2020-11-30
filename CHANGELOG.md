@@ -1,5 +1,7 @@
 # xtypeof Changelog
 
+## v2.0.5 Add GitHub packages action
+
 ## v2.0.4 Improve README.md, shorten package description
 Improve README.md. 
 Replace 123n with BigInt(123) syntax.

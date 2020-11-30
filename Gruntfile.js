@@ -11,10 +11,11 @@ module.exports = function (grunt) {
       purge: {
         command: [
           'npm install',
-          'rm -f package-lock.json',
           'rm -f *.tgz',
           'rm -rf ./dist',
+          'mkdir -p dist',
           'rm -rf ./docs',
+          'mkdir -p docs',
           'npm uninstall',
           'rm -rf ./node_modules',
           'rm -rf ./.nyc_output'
