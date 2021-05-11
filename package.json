@@ -35,6 +35,7 @@
     "grunt-contrib-uglify": ">=5.0.0",
     "grunt-shell": "^3.0.1",
     "jsdoc": "^3.6.6",
+    "underscore": ">=1.12.1",
     "tap": "^14.10.8"
   }
 }
