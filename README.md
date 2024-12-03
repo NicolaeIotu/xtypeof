@@ -18,7 +18,7 @@ lowercase types such as "htmldivelement" a.m.o.
 ## Examples
 ### Node.js
 ```
-const xtypeof = require('xtypeof')
+import xtypeof from 'xtypeof'
 
 console.log(xtypeof([])) // 'array'
 console.log(xtypeof('a')) // 'string'
@@ -27,25 +27,6 @@ console.log(xtypeof(BigInt(123))) // 'bigint'
 console.log(xtypeof(Buffer.alloc(5))) // 'uint8array'
 console.log(xtypeof(new Error('err'))) // 'error'
 console.log(xtypeof(new RangeError('oor'))) // 'error'
-```
-### Browser
-```
-...
-<head>
-    ...
-    <script src="./xtypeof.bundle.js"></script>
-    ...
-...
-    <script>
-        console.log(xtypeof([])); // 'array'
-        console.log(xtypeof('a')); // 'string'
-        console.log(xtypeof(null)); // 'null'
-        console.log(xtypeof(BigInt(123))); // 'bigint'
-        console.log(xtypeof(new Error('err'))); // 'error'
-        console.log(xtypeof(new RangeError('oor'))); // 'error'
-        ...
-    </script>
-...
 ```
 
 ## Others
@@ -59,9 +40,4 @@ If you feel 'module' is a bit too much of a title for **xtypeof** :) then just u
 function xtypeof(o) {
     return Object.prototype.toString.call(o).slice(8, -1).toLowerCase()
 }
-``` 
-
-## Documentation
-[xtypeof documentation](https://nicolaeiotu.github.io/xtypeof/ "xtypeof documentation")
-
-&copy; Copyright 2020 Nicolae Iotu, nicolae.g.iotu@gmail.com
+```
