@@ -4,8 +4,7 @@
 
 **xtypeof** is extended typeof.
 
-This simple single function module has zero dependencies, is seriously fast and lightweight and should run in all
- environments.
+This simple single function lightweight module has zero dependencies and runs in all environments.
 
 **xtypeof** function takes a single parameter which can be anything and returns a lowercase string representing 
 the extended type of object passed including builtins and all other types available 
